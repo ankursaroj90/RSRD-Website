@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="main.css">
+
+    <title>RSRD-Website</title>
+
+    <link rel="icon" href="./assests/logo.png" type="image/icon type">
+</head>
+<body>
+
+
+<!-- spinner element -->
+<div class="spinner-wrapper" id="spinner-wrapper">
+  <div class="screen-content">
+    <h4>Welcome to our school!</h4>
+  </div>
+  <div class="spinners">
+    <div class="down">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="content-to-display">
+
+
+      <!-- Image modal -->
+      <!-- <img src="../assests/popup-img.jpg" alt=""> -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick=closeModal()>Close</span>
+        <img class="modal-content" src="./assests/popup-img.jpg" alt="Example Image">
+      </div>
+
+
+
+
+      <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+          <img src="./assests/logo-img.png" alt="logo">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#intro-example">
+                  <i class="bi bi-house-heart-fill"></i>
+                  Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#about">About School</a></li>
+                <li><a class="dropdown-item" href="./pages/vision-mission.html">Vision & Mission</a></li>
+                <li><a class="dropdown-item" href="#message">Pricipal Desk</a></li>
+                <li><a class="dropdown-item" href="#!">Director Desk</a></li>
+                <li><a class="dropdown-item" href="#!">Manager Desk</a></li>
+                <li><a class="dropdown-item" href="./pages/general-instruction.html">General Instruction</a></li>
+                <li><a class="dropdown-item" href="./pages/salient-features.html">Salient Features</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Academics
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#about">Academic System</a></li>
+                <li><a class="dropdown-item" href="./pages/admission-procedure.html">Admission Procedure</a></li>
+                <li><a class="dropdown-item" href="#new-galary">Co-Curricular Activities</a></li>
+                <li><a class="dropdown-item" href="./pages/general-instruction.html">Mandatory Disclosure Details</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#!">TC 2019-20</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Campus
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./pages/gallery-page.html"><i class="bi bi-images"></i> Photo Galary</a></li> 
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Admin
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#about">Academic Calendar</a></li>
+                <li><a class="dropdown-item" href="#!">Admin Login</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!">Public Disclosure</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Admission
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./pages/admission-procedure.html">Rules & Regulations</a></li>
+                <li><a class="dropdown-item" href="#!">Fee Schedule</a></li>
+                <li><a class="dropdown-item" href="#!">Registration Form</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mailmap">Contact US</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+  </nav>
+
+  <header>
+      <!-- Intro settings -->
+      <style>
+        /* Default height for small devices */
+        #intro-example {
+          height: 400px;
+        }
+    
+        /* Height for devices larger than 992px */
+        @media (min-width: 992px) {
+          #intro-example {
+            height: 600px;
+          }
+        }
+      </style>
+    
+      <!-- Background image -->
+      <div
+        id="intro-example">
+        <div id="video">
+          <video src="./assests/video1.mp4" autoplay loop muted></video>
+        </div>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3"></h1>
+              <h5 class="mb-4">"Experience is the only teacher we have. We may talk and reason all our lives, but we shall not understand a word of truth."</h5>
+              <h6><p>--Swami Vivekanand</p></h6>
+              <a
+                data-mdb-ripple-init
+                class="btn btn-outline-light btn-lg m-2"
+                href="#carouselExampleSlidesOnly"
+                role="button"
+                rel="nofollow"
+                target=""
+              >Start Tour</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Background image -->
+    </header>
+
+  
+
+  <div class="card" id="photo-slide">
+      <span class="title" >
+          Snaps
+      </span>
+      <!-- Main page -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="./assests/DSC_0117.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="./assests/DSC_0011.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="./assests/DSC_1253.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="./assests/DSC_0212.jpg" class="d-block w-100" alt="...">
+          </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="card" id="about">
+      <h1>About <span>US</span></h1>
+      <div class="card" id="about-content">
+            <div class="card-body">
+              <div class="icon">
+                  <i class="bi bi-globe"></i>
+              </div>
+              <h5 class="card-title">Our School</h5>
+              <p class="card-text">To develop Indian Education by enriching its culture and Patriotic fervour with the new education system, a new light as Saraswati Shishu Mandir has been established in 1952 in Gorakhpur. Now this little light is shining just like the Sun to enlighten the whole country by offering its dedicated and value based Education to its…</p>
+            </div>
+            <div class="card-body">
+              <div class="icon">
+                  <i class="bi bi-pen"></i>
+              </div>
+                <h5 class="card-title">PANCHAMUKHI SHIKSHA</h5>
+                <p class="card-text">Basic of Education (Panchamukhi Shiksha)- “Vidya Bharti opts the following five steps to impart the education in their schools for the all round development of the children” Physical Education- For proper physical development of the student, the school imparts training both in traditional Indian games and Modern International games. There is an arrangement for providing…</p>
+            </div>
+    
+            <div class="card-body">
+              <div class="icon">
+                  <i class="bi bi-building"></i>
+              </div>
+                <h5 class="card-title">INFRASTRUCTURE</h5>
+                <p class="card-text">The School is located at a prominent peaceful location of Puranpur. The school building and playground with greenery all around, the school campus is designed to cater to the needs of young, growing children. We provides a classroom environment that motivates students towards better performance. Our classrooms are aesthetically designed and integrated with smart boards…</p>
+            </div>
+
+            <div class="card-body">
+              <div class="icon">
+                  <i class="bi bi-youtube"></i>
+              </div>
+                <h5 class="card-title">Smart Class Available</h5>
+                <p class="card-text">At RSRD Sarawati Vidya Mandir, we provided srudents smart class that cultivate education by opening doors to digital teaching.</p>
+            </div>
+
+            <div class="card-body">
+              <div class="icon">
+                  <i class="bi bi-pc-display-horizontal"></i>
+              </div>
+                <h5 class="card-title">Computer Lab</h5>
+                <p class="card-text">Well designed and separate labs for students run by a well-educated and qualified faculty with one on one access.</p>
+            </div>
+
+            <div class="card-body">
+              <div class="icon">
+                  <i class="bi bi-mortarboard-fill"></i>
+              </div>
+                <h5 class="card-title">Languages Skill Development</h5>
+                <p class="card-text">At RSRD Saraswati Vidya Mandir, we give special emphasis on languages and mathematics to ensure that the children are ready to compete in a global environment.</p>
+            </div>
+      </div>
+  </div>
+
+  <div class="new-galary" id="new-galary">
+    <span id="title">Activity</span>
+    <div id="new-galary-content">
+      <div class="box">
+        <div class="box-img">
+          <img src="./assests/rangoli.png" alt="">
+        </div>
+        <div class="details">
+          <h5>Rangoli Competition</h5>
+          <i class="bi bi-calendar-fill"><span>07-08-2003</span></i>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-img">
+          <img src="./assests/independence-day2.jpeg" alt="">
+        </div>
+        <div class="details">
+          <h5>Independence Day</h5>
+          <i class="bi bi-calendar-fill"><span>07-08-2003</span></i>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-img">
+          <img src="./assests/run-for-unity.jpg" alt="">
+        </div>
+        <div class="details">
+          <h5>Run for unity</h5>
+          <i class="bi bi-calendar-fill"><span>07-08-2003</span></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity" id="activity">
+    <span id="title">Photo <span id="span1">Gallery</span></span>
+    <div class="activity-content">
+      <div class="box">
+        <a href="#!">
+          <img src="./assests/DSC_0148.jpg" alt="">
+          <p class="box-title">Class</p>
+        </a>
+      </div>
+      <div class="box">
+        <a href="#!">
+          <img src="./assests/DSC_0212.jpg" alt="">
+          <p class="box-title">Events</p>
+        </a>
+      </div>
+      <div class="box">
+        <a href="#!">
+          <img src="./assests/DSC_0117.jpg" alt="">
+          <p class="box-title">School</p>
+        </a>
+      </div>
+      <div class="box">
+        <a href="#!">
+          <img src="./assests/independence-day.jpeg" alt="">
+          <p class="box-title">Guest</p>
+        </a>
+      </div>
+      <div class="box" id="more-photos">
+          <a href="./pages/gallery-page.html">Click for More</a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- message from principles desk -->
+  <div class="card" id="message">
+      <div class="bg-image hover-overlay" id="img" data-mdb-ripple-color="light">
+        <img src="./assests/PRINCIPAL-768x576.jpg" class="img-fluid"/>
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Message from Principle's desk</h5>
+        <p class="card-text">My Dear Children, <i class="bi bi-quote"></i> The gift of knowledge is a far higher gift than that of food and clothes; it is even higher than giving life to a man, because the real life of man consists of knowledge." The demand of time for this generation is READING ! We must motivate our children to have…
+          <i class="bi bi-quote"></i>
+      </p>
+      </div>
+    </div>
+
+    <div class="mailmap" id="mailmap">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.8331054169394!2d80.13536860423547!3d28.51466859708631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1cd771935487d%3A0x69d35e50bca91f4e!2sRam%20Swaroop%20Ram%20Dulari%20Saraswati!5e0!3m2!1sen!2sin!4v1709211590760!5m2!1sen!2sin" width=100% height="400" style="border:2px solid gainsboro; border-radius: 10px; padding: 2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="mailform">
+        <form id="email-form" onsubmit=reset()>
+          <h3>get in touch</h3>
+
+          <div class="inputBox">
+
+              <span class="bi bi-person-fill"></span>
+              <input type="text" id="name" placeholder="name">
+
+          </div>
+
+          <div class="inputBox">
+
+              <span class="bi bi-envelope-heart"></span>
+              <input type="email" id="email" placeholder="email" value="example@gmail.com">
+
+          </div>
+
+          <div class="inputBox">
+
+              <span class="bi bi-telephone-fill"></span>
+              <input type="number" id="phone" placeholder="number">
+
+          </div>
+          
+          <div class="inputBox">
+
+              <span class="fas bi-chat-dots"></span>
+              <textarea id="message" rows="4" placeholder="how can we help you !!"></textarea>
+
+          </div>
+
+          <input type="submit" value="contact now" class="btn1">
+        </form>
+      </div>
+    </div>
+  
+  <!-- <img src="college1.png" class="img-fluid" alt="imgtext"> -->
+  <!-- <div id="liveAlertPlaceholder">
+      <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+  </div> -->
+
+  <!-- footer -->
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <span class="icon"><i class="bi bi-facebook"></i></span>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <span class="icon"><i class="bi bi-twitter"></i></span>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <span class="icon"><i class="bi bi-google"></i></span>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <span class="icon"><i class="bi bi-instagram"></i></span>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <span class="icon"><i class="bi bi-linkedin"></i></span>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <span class="icon"><i class="bi bi-github"></i></span>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas bi-gem me-3"></i>rsrd saraswati vidya mandir
+             , Near lic office puranpur 262122
+          </h6>
+          <p>
+            <i>An English Medium Co-Educational School</i><br>
+            <i>Affiliated to C.B.S.E, New Delhi</i><br>
+            <i>(Affiliation No: 2131483)</i>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="bi bi-house-heart-fill"></i> Near LIC Puranpur 262122</p>
+          <p>
+            <i class="bi bi-envelope"></i>
+            info@example.com
+          </p>
+          <p><i class="bi bi-telephone-fill"></i> + 01 234 567 88</p>
+          <p><i class="bi bi-printer-fill"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.1);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="#!">Ankur Saroj</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+<!-- <div class="col-lg-4 col-md-6 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;" mce_style="animation-delay: 0.2s; opacity: 1;">
+  <div class="icon_box icon_box_style3 box_shadow1 text-center">
+      <div class="icon">
+          <i class="fas fa-user-graduate"></i>
+      </div>
+      <div class="icon_box_content">
+          <h5>Admission Center</h5>
+          <p>The St. Xavier’s consist of filling admission from online and submission of hard copy in school.
+</p><br>
+      </div>
+  </div>
+</div> -->
+
+
+    </div>
+
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- // Initialize EmailJS with your user ID -->
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "YOUR_PUBLIC-KEY",
+            });
+        })();
+      </script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
