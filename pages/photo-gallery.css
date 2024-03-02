@@ -116,3 +116,49 @@
         width: calc(100% - 6rem);
     }
 }
+
+@media(max-width: 460px) {
+
+    .container-fluid{
+        height: 90px;
+        width: 100%;
+        border: 1px solid;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .navbar-brand{
+        height: 90px;
+        width: 83%;
+        margin: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .main-box{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main-box-content{
+        padding: 5px;
+        margin: 0;
+    }
+
+    .main-box-content .div{
+        width: 100%;
+        margin: 5px;
+        margin-bottom: 15px;
+    }
+
+    .main-box-content .div .carousel{
+        border: none;
+        box-shadow: 0 0 4px 4px lightblue;
+        margin-bottom: 5px;
+    }
+
+    .main-box-content .div .title{
+        font-size: 18px;
+    }
+
+}
