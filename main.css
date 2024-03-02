@@ -762,6 +762,16 @@ html::-webkit-scrollbar-thumb{
     .new-galary-content .box{
         padding: 0;
     }
+
+    .d-flex .me-4{
+        padding: 0;
+    }
+
+    .d-flex .me-4 i{
+        margin: 0;
+        font-size: 15px;
+        padding: 0;
+    }
     
 }
 
