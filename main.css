@@ -173,6 +173,7 @@ html::-webkit-scrollbar-thumb{
     background: white;
     border: 1px solid brown;
     transition: .1s linear;
+    z-index: 11000;
 }
 
 .navbar-toggler:focus{
@@ -729,25 +730,6 @@ html::-webkit-scrollbar-thumb{
 
 @media (min-width: 240px) {
 
-    .container-fluid{
-        height: 12vh;
-        width: 100vw;
-        border: 1px solid;
-        padding: 1%;
-        top: 0;
-        left: 0;
-    }
-
-    .navbar-brand{
-        height: 10vh;
-        width: 80vw;
-        margin: 1%;
-        left: 0;
-        top: 0;
-        border: 1px solid gainsboro;
-        border-radius: 10px;
-    }
-
     .card .card-body {
         width: calc(100% - 2rem);
     }
@@ -919,4 +901,38 @@ html::-webkit-scrollbar-thumb{
     .card .card-body {
         width: calc(33.33% - 2rem); 
     }
+
+@media (max-width: 480px){
+
+    .navbar-brand{
+        /* position: absolute; */
+        display: flex;
+        left: 0;
+        top: 0;
+        height: 12vh;
+        width: 80vw;
+        margin-left: 0;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .navbar-brand img{
+        height: 12vh;
+        width: auto;
+        left: 0;
+        top: 0;
+    }
+
+    .mailmap{
+        width: 100%;
+        padding: 2px;
+    }
+
+    .mailform{
+        width: 100%;
+        padding: 0;
+    }
+}
+
 }
