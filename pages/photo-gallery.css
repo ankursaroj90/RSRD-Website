@@ -7,10 +7,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background-image: url(./assets/sweet-memories.png); */
 }
 
 .main-box .span{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: 900;
     color: rgba(120, 43, 24, 0.908);
     background-color: none;
@@ -89,6 +90,7 @@
 .div img{
     width: 100%;
     height: auto;
+    /* max-height: 250px; */
     display: flex;
     flex-wrap: wrap;
     object-position: center center;
@@ -140,25 +142,10 @@
     .main-box-content .div .title{
         font-size: 20px;
     }
+
 }
 
-@media(max-width: 460px) {
-
-    .container-fluid{
-        height: 90px;
-        width: 100%;
-        border: 1px solid;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .navbar-brand{
-        height: 90px;
-        width: 83%;
-        margin: 0;
-        left: 0;
-        top: 0;
-    }
+@media(max-width: 460px) {  
 
     .main-box{
         padding-left: 0;
