@@ -808,7 +808,7 @@ html::-webkit-scrollbar-thumb{
     }
 
     #new-galary-content .box .details{
-        position: absolute;
+/*         position: absolute; */
     }
 
     .d-flex .me-4{
