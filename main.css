@@ -728,6 +728,24 @@ html::-webkit-scrollbar-thumb{
 
 
 @media (min-width: 240px) {
+
+    .container-fluid{
+        height: 90px;
+        width: 100%;
+        border: 1px solid;
+        padding: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar-brand{
+        height: 90px;
+        width: 80%;
+        margin: 0;
+        left: 0;
+        top: 0;
+    }
+
     .card .card-body {
         width: calc(100% - 2rem);
     }
@@ -736,7 +754,14 @@ html::-webkit-scrollbar-thumb{
         width: calc(100% - 4rem);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
+    }
+
+    .new-galary #new-galary-content .box .box-img{
+        width: 250px;
+        /* transform: scale(1.5); */
+        margin: 0;
+        /* position: absolute; */
     }
 
     .activity-content .box{
@@ -752,25 +777,52 @@ html::-webkit-scrollbar-thumb{
     }
 
     .new-galary{
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
     }
 
-    .new-galary-content{
+    #new-galary-content{
         padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: self-start;
     }
 
-    .new-galary-content .box{
+    #new-galary-content .box{
+        min-width: 90%;
         padding: 0;
+        margin: 0;
+        border: 1px solid;
+    }
+
+    #new-galary-content .box .box-img{
+        width: 100%;
+        border: 2px solid red;
+    }
+
+    .new-galary-content .box .box-img img{
+        width: 50px;
+    }
+
+    #new-galary-content .box .details{
+        position: absolute;
     }
 
     .d-flex .me-4{
         padding: 0;
+        
     }
 
     .d-flex .me-4 i{
         margin: 0;
         font-size: 15px;
         padding: 0;
+    }
+
+    #photo-slide #carouselExampleSlidesOnly{
+        margin: 0;
+        margin-top: 5px;
     }
     
 }
@@ -779,6 +831,7 @@ html::-webkit-scrollbar-thumb{
     .activity-content .box{
         width: calc(50% - 20px);
     }
+
 
     .new-galary #new-galary-content .box{
         display: flex;
@@ -809,7 +862,7 @@ html::-webkit-scrollbar-thumb{
     .new-galary-content .box{
         padding: 1rem;
     }
-    
+
 }
 
 @media (min-width: 798px) {
